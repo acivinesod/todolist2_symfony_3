@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <a class="btn btn-default" href="/">Back To Todos</a>
+    <hr>
+    <h2 class="page-header">{{ todos.name }}</h2>
+
+    <ul class="list-group">
+        <li class="list-group-item">Category : {{ todos.category }}</li>
+        <li class="list-group-item">Priority : {{ todos.priority }}</li>
+        <li class="list-group-item">Due : <i class="fa fa-calendar" aria-hidden="true"></i>{{ todos.dueDate |date (" d/m/Y  ")}}</li>
+        <li class="list-group-item">Description : {{ todos.description }}</li>
+
+    </ul>
+{% endblock %}
